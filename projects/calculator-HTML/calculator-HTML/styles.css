@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Helvetica Neue';
+}
+
+/**, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue';
+    font-weight: normal;
+    padding: 0;
+}*/
+
+body {
+    margin: 25px;
+}
+
+/* CONTAINER Negro calculadora */
+.container {
+    background: black;
+    width: 320px;
+    height: 550px;
+    
+    border-radius: 50px; /* Rounder border */
+    padding: 40px;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white; /* Text color */
+}
+
+.output {
+    grid-column: 1 / -1;
+    text-align: right;
+    font-size: 50px;
+}
+
+.output .previous-operand{  
+    color: grey;
+    font-size: 30px;
+    height: 50px;
+    width: 270px;
+    margin-left:-20px;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 50px;
+    height: 60px;
+    width: 270px;
+    margin-left:-20px;
+    word-break: break-all;
+    overflow-x: auto;
+}
+
+/* CUADRÍCULA de los botones */
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    grid-gap: 10px;
+    
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(5, 60px);
+}
+
+.calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .75);
+}
+
+/* GENERAL todos los botones*/
+.button {
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    height: 60px;
+    width: 60px;
+
+    font-size: 20px;
+    
+    background: #333;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+}
+
+.button.function {
+    color: black;
+    background: #a5a5a5;
+}
+
+.button.operator {
+    background: #f1a33c;
+    color: white;
+}
+
+.button.number {
+    color: white;
+}
+
+.button.zero {
+    grid-column: span 2;
+    color: white;
+    width: 130px;
+    border-radius: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
